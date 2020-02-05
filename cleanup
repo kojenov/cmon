@@ -1,0 +1,13 @@
+#!/bin/bash
+
+rm -f */document.ransom
+
+rm -f */test-???.png
+
+rm -f */*-encrypted.png */xor*.png
+
+rm -f */server/sessionkey */server/encryptionkey
+rm -rf */server/__pycache__ */server/venv */server/*.pyc
+
+rm -f */sha */pbkdf2
+
