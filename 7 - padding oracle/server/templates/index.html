@@ -1,8 +1,9 @@
 <html>
 <head><title>Padding oracle</title></head>
 <body>
-  <p>Send me an encrypted message using <a href="send?msg=">http://localhost:5000/send?msg=</a></p>
-  <p>Here is my encrypted message for you:<br/>
-  {{msg}}</p>
+  <p>Send me an encrypted message using <a href="send?msg=">http://{{host}}/send?msg=</a></p>
+  <p>for example:<br/>
+  <a href="send?msg={{msg}}">http://{{host}}/send?msg={{msg}}</a><br/>
+  (you can't decrypt since you don't have the key, loser)</p>
 </body>
 </html>

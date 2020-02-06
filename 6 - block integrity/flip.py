@@ -11,7 +11,7 @@ ciphertext = base64.b64decode(sys.argv[1])
 original   = sys.argv[2]
 desired    = sys.argv[3]
 
-# create byt arrays from the first blocks
+# create byte arrays from the first blocks
 cBytes = bytearray(ciphertext)[:16]
 oBytes = bytearray(original)[:16]
 dBytes = bytearray(desired)[:16]

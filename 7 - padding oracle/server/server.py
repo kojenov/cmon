@@ -22,7 +22,7 @@ def index():
   ciphertext = cipher.encrypt(pad('Padding oracles are real!'.encode(), AES.block_size))
 
   msg = (iv+ciphertext).hex()
-  response = make_response(render_template('index.html', msg=msg))
+  response = make_response(render_template('index.html', host=request.host, msg=msg))
   
   return response
 
