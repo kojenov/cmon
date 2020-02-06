@@ -45,5 +45,5 @@ Notice the app returns different code depending on the validity.
 Now run the exploit (your ciphertext will be different)
 
 ```
-$ ./exploit.py http://localhost:5000/send?msg= 36289eda81e4895db64c84bae1468eb21b122cebcaf1b0d81232a496d77a3238df444a038398693869ac3c598b434c59
+$ ./exploit.py http://localhost:5000/send?msg=36289eda81e4895db64c84bae1468eb21b122cebcaf1b0d81232a496d77a3238df444a038398693869ac3c598b434c59
 ```
