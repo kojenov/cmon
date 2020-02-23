@@ -21,7 +21,7 @@ def encrypt(fname, key):
   imEnc = Image.frombytes(mode='RGB', size=im.size, data=encrypted)
 
   # save encrypted image as a new file
-  fnameEnc = re.sub('(?P<name>.+)\.', '\g<name>-encrypted.', fname)
+  fnameEnc = re.sub('(?P<name>.+)\.', '\g<name>-enc.', fname)
   imEnc.save(fnameEnc)
   print('Encrypted image saved as ' + fnameEnc)
   
@@ -31,6 +31,7 @@ if len(sys.argv) < 3:
   sys.exit()
   
 # generate a truly random encryption key
+print('\ngenerating a random encryption key...')
 key = Random.new().read(16)
 
 # encrypt both images

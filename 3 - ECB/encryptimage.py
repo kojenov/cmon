@@ -17,13 +17,16 @@ def encryptImage(fname, mode):
 
   # generate a random key
   # note: we don't store the key anywhere
+  print('\ngenerating a random encryption key...')
   key = Random.new().read(16)
 
   if mode == 'ECB':
     # ECB mode... very cool!
+    print('encrypting with ECB mode...')
     cipher = AES.new(key, AES.MODE_ECB)
   else:
     # CBC mode requires an IV
+    print('encrypting with CBC mode...')
     iv  = Random.new().read(16)
     cipher = AES.new(key, AES.MODE_CBC, iv)
     

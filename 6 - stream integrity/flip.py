@@ -7,7 +7,8 @@ if len(sys.argv) < 4:
   print('usage: ' + sys.argv[0] + ' <ciphertext> <original plaintext> <desired plaintext>')
   sys.exit()
 
-ciphertext = sys.argv[1]
+(nonce, ciphertext) = sys.argv[1].split('.')
+
 original   = sys.argv[2]
 desired    = sys.argv[3]
 
@@ -20,4 +21,4 @@ dBytes = bytearray(desired)
 newCipherText = ''.join(chr(c^o^d) for c,o,d in zip(cBytes,oBytes,dBytes))
 
 # print the result
-print(base64.b64encode(newCipherText))
+print(nonce + '.' + base64.b64encode(newCipherText))

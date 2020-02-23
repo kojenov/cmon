@@ -18,5 +18,5 @@ key = bytes(numpy.bitwise_xor(block1, block3))
 keyhex = key.hex()
 print('\nRetrieved session cookie encryption key: %s' % keyhex)
 
-print('\nNow try this:')
-print('echo -n <plaintext> | openssl enc -aes-128-cbc -in - -iv %s -K %s | base64 -w 0' % (keyhex, keyhex))
+# print('\nNow try this:')
+# print('echo -n <plaintext> | openssl enc -aes-128-cbc -in - -iv %s -K %s | base64 -w 0' % (keyhex, keyhex))
