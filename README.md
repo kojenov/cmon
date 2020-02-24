@@ -4,3 +4,6 @@ These examples are written in Python 3 and require a couple of modules to be ins
 
 `pip3 install pycryptodome numpy`
 
+See the readmes in each directory for guidance.
+
+Here are the [presentation slides](https://docs.google.com/presentation/d/1Omb8hSnHMVIqoJKV0RjT6o2mToA1abo33I3I9iLVMMg/) from my BSides SF 2020 talk.
