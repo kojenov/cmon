@@ -1,8 +1,6 @@
 # Offensive Help: Crypto Mistakes ON demand! (OH C'MON!)
 
-These examples are written in Python 3 and require a couple of modules to be installed:
-
-`pip3 install pycryptodome numpy`
+These examples are written in Python 3 and may require additional modules to be installed.
 
 See the readmes in each directory for guidance.
 

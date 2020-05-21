@@ -21,13 +21,12 @@ pip install pycryptodome
 
 Run the application
 ```
-export FLASK_APP=server.py
-flask run
+FLASK_RUN_PORT=5007 FLASK_APP=server.py flask run
 ```
 
 ## Use the application
 
-Navigate to http://localhost:5000, start browser developer tools, and examine the session cookie
+Navigate to http://localhost:5007, start browser developer tools, and examine the session cookie
 
 
 ## Bit flipping attack

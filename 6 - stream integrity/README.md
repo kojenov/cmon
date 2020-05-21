@@ -21,13 +21,12 @@ pip install pycryptodome
 
 Run the application
 ```
-export FLASK_APP=server.py
-flask run
+FLASK_RUN_PORT=5006 FLASK_APP=server.py flask run
 ```
 
 ## Use the application
 
-Navigate to http://localhost:5000, start browser developer tools, and examine the session cookie
+Navigate to http://localhost:5006, start browser developer tools, and examine the session cookie
 
 
 ## Bit flipping attack
@@ -56,9 +55,9 @@ Putting everything together:
 
 
 ```
-$ ./flip.py 'j/3zPw9KCchD8ofdX/EaH8BNQuPhWG0x/IG3mZa67rA17FAMygLR' '{"user": "guest", "date": "2020-01-29"}' '{"user": "admin"}'
+$ ./flip.py '9G/ySV3Ry9E=.j/3zPw9KCchD8ofdX/EaH8BNQuPhWG0x/IG3mZa67rA17FAMygLR' '{"user": "guest", "date": "2020-01-29"}' '{"user": "admin"}'
 
-j/3zPw9KCchD8oHMV+sAH5E=
+9G/ySV3Ry9E=.j/3zPw9KCchD8oHMV+sAH5E=
 ```
 
 Now, replace the encrypted part with the new value in the session cookie, refresh the page and behold the admin session!

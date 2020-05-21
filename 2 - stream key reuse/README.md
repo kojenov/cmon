@@ -9,16 +9,16 @@ head -c 21 /dev/zero | ./encrypt.py "Super secret key" > cipher2
 ```
 ./encryptimage.py alexei.png smile.png
 ```
-Then open in GIMP and layer difference
+Then open the resulting images in Krita and XOR layers (In GIMP, you can use layer difference but it's not quite the same)
 
+You can also use a coomand line tool:
 `sudo apt install gmic`
 
 https://stackoverflow.com/a/40049271
 ```
-gmic alexei-encrypted.png smile-encrypted.png -blend xor -o xor1.png
-gmic alexei-encrypted.png smile-encrypted.png smile.png -blend xor -o xor2.png
+gmic alexei-enc.png smile-enc.png -blend xor -o xor1.png
+gmic alexei-enc.png smile-enc.png smile.png -blend xor -o xor2.png
 ```
-
 
 Images:
 
