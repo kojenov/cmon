@@ -14,7 +14,7 @@ def encryptImage(fname, mode):
 
   # get the image pixel data
   pixels = im.tobytes()
-
+  
   # generate a random key
   # note: we don't store the key anywhere
   print('\ngenerating a random encryption key...')
@@ -30,7 +30,11 @@ def encryptImage(fname, mode):
     iv  = Random.new().read(16)
     cipher = AES.new(key, AES.MODE_CBC, iv)
     
-  # actual encryption
+  # poor man's padding: just add some zeros
+  if len(pixels) % 16 > 0:
+    pixels += b'\x00' * (16 - len(pixels) % 16)
+
+  # encryption
   encrypted = cipher.encrypt(pixels)
 
   # create a new image object from encrypted bytes
@@ -42,7 +46,7 @@ def encryptImage(fname, mode):
 
   print('Encrypted image saved as ' + fnameEnc)
 
-  # optional: byte frequencey analysis
+  # optional: byte frequency analysis
   
   #d = {}
   #for b in encrypted:
