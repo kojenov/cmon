@@ -11,7 +11,7 @@ head -c 21 /dev/zero | ./encrypt.py "Super secret key" > cipher2
 ```
 Then open the resulting images in Krita and XOR layers (In GIMP, you can use layer difference but it's not quite the same)
 
-You can also use a coomand line tool:
+You can also use a command line tool:
 `sudo apt install gmic`
 
 https://stackoverflow.com/a/40049271
